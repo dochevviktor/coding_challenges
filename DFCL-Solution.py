@@ -13,11 +13,11 @@ txt = (0xe5534ada,0xc53023aa,0xad55518a,0xc42671f8,0xa1471d94,0xd8676ce1,0xb1130
 mylist = []
 answer = ""
 
-#remove xor backwards, ripped off from the image decoder
+#remove xor backwards
 for  i in range(len(txt)-1,0,-1):
     mylist.append(txt[i] ^ txt[i-1] )
 
-#reverse mylist, idk why, prob becayse of backward thing
+#reverse mylist
 for  i in reversed(mylist):
  answer+= binascii.unhexlify('%x' % i)
 
