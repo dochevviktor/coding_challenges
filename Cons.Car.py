@@ -14,7 +14,7 @@ print int((a*2)-(2**(math.ceil(math.log(a)/math.log(2)))))
 """
 This is the Lisp/Schema that needed to be simplified and converted
 
-(define (f n) #this was the only thing i understood right from the start
+(define (f n) 
  (do ((d (do ((i (- n 1) (- i 1)) # crazy for loops in loops
               (d '() (cons i d)))
              ((< i 0) d)) # bitshift ahoy!
